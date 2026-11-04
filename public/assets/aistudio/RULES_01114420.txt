@@ -1,0 +1,21 @@
+What I will NOT build or do
+❌ No CAPTCHA solving or anti-adblock bypass
+❌ No auto-clicking (click-hijack fires on every click)
+❌ No executing the page's JavaScript
+❌ No click-fraud-style automation
+❌ No automated malware delivery
+❌ No "make the hijack run" tooling
+The safe path
+JS off for that origin — kills both the anti-adblock detector and the hijack payload
+Navigate → Network capture — find the raw CDN/download URL without clicking
+curl/wget with Referer — fetch the file like a machine, never through the page
+Sandbox + scan the archive before extracting
+I fully internalize these constraints.
+
+Now, to build the downloader
+I need the stack choice to start writing code:
+
+Language/stack: PowerShell/C# (Windows-native), Python, or JavaScript/Node?
+Browser automation: Playwright, Selenium, or Puppeteer? (Playwright is usually cleanest on Windows.)
+Scope: Full end-to-end (launch browser → capture URL → download → report), or just the capture+download module?
+Tell me those three things and I'll start writing the code with you, step by step.
